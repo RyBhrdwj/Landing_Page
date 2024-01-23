@@ -28,7 +28,7 @@ section {
 
 .main_banner {
   position: relative;
-  height: 100vh;
+  height: 100%;
   background-image: url(../images/balcony.jpg);
   background-size: cover;
   background-position: center;
