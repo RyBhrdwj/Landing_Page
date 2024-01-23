@@ -1,16 +1,63 @@
 * {
-    background-color: var(--primary-bg-color);
-    color: var(--primary-fg-color);
-    font-family: 'Arial', sans-serif;
-    font-weight: var(--font-weight-bold);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 :root {
-    --primary-bg-color: #f8f9fa;
-    --primary-fg-color: #212529;
+  --primary-bg-color: #f8f9fa;
+  --primary-fg-color: #212529;
+  --fw-light: 300;
+  --fw-normal: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
 
-    --font-weight-light: 300;
-    --font-weight-normal: 400;
-    --font-weight-bold: 700;
-    --font-weight-black: 900;
+section {
+  max-width: 100%;
+  padding: 2rem 0;
+}
+
+.main_banner {
+  position: relative;
+  height: 100vh;
+  background-image: url(../images/balcony.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.enquire-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Set a maximum width if needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding-right: 60px; /* Space for the button on the right */
+}
+
+.enquire-button {
+  position: fixed;
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%) rotate(180deg);
+  padding: 1.2rem 0.8rem;
+
+  font-weight: var(--fw-normal);
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+
+  background-color: darkblue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
