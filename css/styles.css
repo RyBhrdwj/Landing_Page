@@ -61,6 +61,10 @@ section {
 }
 
 @media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem;
+  }
+
   .container {
     flex-direction: column;
     text-align: center;
