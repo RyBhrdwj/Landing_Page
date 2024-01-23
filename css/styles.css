@@ -1,0 +1,16 @@
+* {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-fg-color);
+    font-family: 'Arial', sans-serif;
+    font-weight: var(--font-weight-bold);
+}
+
+:root {
+    --primary-bg-color: #f8f9fa;
+    --primary-fg-color: #212529;
+
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+}
