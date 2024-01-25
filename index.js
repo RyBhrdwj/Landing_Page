@@ -10,9 +10,10 @@ const hideEnquiry = () => {
 
     const enquiryForm = document.querySelector('.enquiry-form-container');
     
+    enquiryForm.style.opacity = 0;
     setTimeout(() => {
         enquiryForm.style.display = 'none';
-    }, 0);
+    }, 300);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

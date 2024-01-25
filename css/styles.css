@@ -13,13 +13,21 @@
   box-sizing: border-box;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 :root {
   --primary-bg-color: #f8f9fa;
-  --primary-fg-color: #d1d2f4;
-  --section-bg-color-1: #F1EAFF;
+  --primary-fg-color: #000000;
+  --section-bg-color-1: #f3ffea;
   --section-bg-color-2: #E5D4FF;
   --nav-highlight-color: #01d96a;
-  --highlight-color: #3700fd;
+  --highlight-color: #00fd15;
 
   --fw-light: 300;
   --fw-normal: 400;
@@ -164,11 +172,12 @@ section {
   width: 100%;
   height: 100vh;
   z-index: 1;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  transition: opacity 0.1s ease-in-out;
 }
 
 .enquiry-form {
@@ -258,6 +267,10 @@ section {
     display: flex;
     text-align: center;
     justify-content: space-around;
+  }
+
+  .enquiry-form {
+    width: 90%;
   }
 }
 
