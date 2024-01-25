@@ -29,6 +29,7 @@
   --fs-400: 1rem;
   --fs-500: 1.25rem;
   --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
   --fs-800: 2rem;
   --fs-900: 4rem;
 
@@ -54,6 +55,7 @@ header {
 .brand {
   font-size: var(--fs-800);
   font-weight: var(--fw-bold);
+  cursor: default;
 }
 
 .navbar {
@@ -63,17 +65,17 @@ header {
   align-items: center;
 }
 
-.nav-items > a {
+.nav-item{
   padding: 0 0.5rem;
-  font-size: var(--fs-600);
+  font-size: var(--fs-500);
   color: var(--primary-color);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
-.nav-items a:hover {
-  transform: translateX(0.5rem);
+.nav-item:hover {
   color: var(--highlight-color);
+  font-size: calc(var(--fs-500) + 2px);
 }
 
 section {
@@ -127,11 +129,30 @@ section {
 .bottom-nav-item {
   color: #fff;
   text-decoration: none;
-  font-size: var(--fs-500);
+  font-size: var(--fs-800);
 }
 
-.bottom-nav-item > * {
-  display: block;
+.bottom-nav-item:hover, .bottom-nav-item:active {
+  color: var(--highlight-color);
+}
+
+.enquire-button {
+  position: fixed;
+  top: 50%;
+  right: 0px;
+
+  transform: translateY(-50%) rotate(180deg);
+  padding: 1.2rem 0.8rem;
+
+  font-weight: var(--fw-bold);
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+
+  background-color: var(--highlight-color);
+  color: var(--primary-fg-color);
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
 }
 
 @media (max-width: 640px) {
@@ -155,23 +176,4 @@ section {
     flex-direction: row;
     text-align: left;
   }
-}
-
-.enquire-button {
-  position: fixed;
-  top: 50%;
-  right: 0;
-
-  transform: translateY(-50%) rotate(180deg);
-  padding: 1.2rem 0.8rem;
-
-  font-weight: var(--fw-normal);
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-
-  background-color: darkblue;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
