@@ -6,15 +6,16 @@
   <title>DLF</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <script src="index.js"></script>
 </head>
 <body>  
   <header>
     <nav class="navbar">
         <div class="brand">BrandName</div>
         <div>
-          <a href="#" class="nav-item">Enquiry</a>
-          <a href="tel:+91-99581-86559" class="nav-item">Call</a>
-          <a href="https://wa.me/91-99581-86559" class="nav-item">WhatsApp</a>
+          <a href="#" class="nav-item enquire">Enquiry</a>
+          <a href="tel:9958186559" class="nav-item">Call</a>
+          <a href="https://wa.me/9958186559" class="nav-item">WhatsApp</a>
         </div>
     </nav>
   </header>
@@ -50,42 +51,30 @@
   <div>
     <nav class="bottom-nav">
       <a href="#" class="bottom-nav-item">
-        <i class="fa fa-envelope"></i>
+        <i class="fa fa-envelope enquire"></i>
       </a>
       <a href="tel:+91-99581-86559" class="bottom-nav-item">
         <i class="fa fa-phone"></i>
       </a>
-      <a href="https://wa.me/91-99581-86559" class="bottom-nav-item">
+      <a href="https://wa.me/9958186559" class="bottom-nav-item">
         <i class="fa-brands fa-whatsapp"></i>
       </a>
     </nav>
   </div>
 
   <div>
-    <button class="enquire-button">Enquire Now</button>
+    <button class="enquire-button" onclick="showEnquiry()">Enquire Now</button>
   </div>
-  <!-- <section class="form">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScsQQZc8thw0S4gXLs9szAJwrQ-qmx_SDuiTWvvhVgD8TgA5A/viewform?embedded=true" width="100%" height="1050px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </section> -->
   <section>
-    <div class="enquiry-form">
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScsQQZc8thw0S4gXLs9szAJwrQ-qmx_SDuiTWvvhVgD8TgA5A/formResponse">
-        <div>
-          <input type="text" placeholder="Name" name="entry.742627052">
-        </div>
-        <div>
-          <input type="text" placeholder="LastName" name="entry.203179022">
-        </div>
-        <div>
-          <input type="email" placeholder="Email" name="entry.1635665227">
-        </div>
-        <div>
-          <input type="text" placeholder="Number" name="entry.360339383">
-        </div>
-        <div>
-          <input type="submit" value="Submit">
-        </div>
-      </form>
+    <div class="enquiry-form-container">
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScsQQZc8thw0S4gXLs9szAJwrQ-qmx_SDuiTWvvhVgD8TgA5A/formResponse" class="enquiry-form">
+        <button class="close-button" type="button" onclick="hideEnquiry()"></button>
+        <h1 class="form-title">ENQUIRE NOW</h1>
+        <input type="text" placeholder="First Name" name="entry.742627052" class="input-field" required>
+        <input type="text" placeholder="Last Name" name="entry.203179022" class="input-field">
+        <input type="email" placeholder="Email" name="entry.1635665227" class="input-field" required>
+        <input type="text" placeholder="Phone Number" name="entry.360339383" class="input-field" required>
+        <button class="submit-button">Submit</button>
     </div>
   </section>
 </body>
