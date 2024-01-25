@@ -6,15 +6,19 @@ const showEnquiry = () => {
     enquiryForm.style.opacity = 1;
 };
 
-const hideEnquiry = () => {
+const formReset = () => {
+    const form = document.querySelector('.enquiry-form');
+    form.reset();
+}
+
+const closeEnquiry = () => {
 
     const enquiryForm = document.querySelector('.enquiry-form-container');
-    const form = document.querySelector('.enquiry-form');
 
     enquiryForm.style.opacity = 0;
     setTimeout(() => {
         enquiryForm.style.display = 'none';
-        form.reset();
+        formReset();
     }, 300);
 }
 
