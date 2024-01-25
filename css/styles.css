@@ -103,6 +103,7 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .content-section {
@@ -228,7 +229,7 @@ section {
 .form-title {
   text-align: center;
   font-size: var(--fs-800);
-  margin: 1rem auto;
+  margin: 0.5rem auto;
 }
 
 .input-field {
@@ -248,7 +249,7 @@ section {
 
 .submit-button {
   width: 40%;
-  margin: 1rem auto;
+  margin: 1.2rem auto;
   padding: 0.5rem;
   font-size: var(--fs-500);
   color: var(--primary-fg-color);
@@ -271,6 +272,10 @@ section {
 
   .enquiry-form {
     width: 90%;
+  }
+
+  .input-field {
+    margin: 0.6rem auto;
   }
 }
 
