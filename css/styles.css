@@ -30,6 +30,10 @@ input:-webkit-autofill:active {
     -webkit-background-clip: text;
 }
 
+input:-webkit-autofill::first-line {
+  font-size: 22rem;
+}
+
 :root {
   --primary-bg-color: #dcdddd;
   --dark-fg-color: #000000;
