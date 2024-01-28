@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     
     const sectionHeadings = document.querySelectorAll('.section-heading');
+    const sectionImages = document.querySelectorAll('.img');
+    const sectionDescription = document.querySelectorAll('.desc');
 
     const observer = new IntersectionObserver((entries) => {
         
@@ -45,10 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     },
     { 
-        threshold: 0.6
+        threshold: 0.3
     });
 
-    sectionHeadings.forEach((sectionHeading) => {
-        observer.observe(sectionHeading);
+    sectionHeadings.forEach((heading) => {
+        observer.observe(heading);
+    });
+
+    sectionImages.forEach((image) => {
+        observer.observe(image);
+    });
+
+    sectionDescription.forEach((description) => {
+        observer.observe(description);
     });
 });
