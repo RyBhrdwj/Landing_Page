@@ -22,12 +22,13 @@ a {
 }
 
 :root {
-  --primary-bg-color: #f8f9fa;
-  --primary-fg-color: #000000;
-  --section-bg-color-1: #f3ffea;
-  --section-bg-color-2: #E5D4FF;
-  --nav-highlight-color: #01d96a;
-  --highlight-color: #00fd15;
+  --primary-bg-color: #dcdddd;
+  --dark-fg-color: #000000;
+  --light-fg-color: #ffffff;
+  --section-bg-color: #dcdddd;
+  --nav-highlight-color: #ab96fb;
+  --highlight-color: #a534e9;
+  --heading-color: #47026a;
 
   --fw-light: 300;
   --fw-normal: 400;
@@ -96,6 +97,10 @@ section {
   align-items: center;
 }
 
+section:nth-child(even) {
+  background-color: var(--section-bg-color);
+}
+
 .main_banner {
   position: relative;
   height: 100vh;
@@ -106,26 +111,34 @@ section {
   overflow: hidden;
 }
 
-.content-section {
-  background-color: var(--secondary-bg-color-1);
-}
-
 .section-heading {
+  margin-bottom: 1rem;
   font-size: var(--fs-800); 
   font-weight: var(--fw-normal);
-  margin-bottom: 1rem;
+  color: var(--heading-color);
 }
 
 .container {
-  width: 0px;
+  width: 90%;
+  max-width: 1000px;
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
   text-align: center;
   flex: 1;
   justify-content: space-around;
-  align-items: center;
-  column-gap: 2rem;
+}
+
+.container > * {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.img {
+  width: 100%;
+  aspect-ratio: 1.5;
+  object-fit: contain;
 }
 
 .bottom-nav {
@@ -138,7 +151,7 @@ section {
 }
 
 .bottom-nav-item {
-  color: var(--section-bg-color-1);
+  color: var(--section-bg-color);
   text-decoration: none;
   font-size: var(--fs-800);
 }
@@ -160,7 +173,7 @@ section {
   text-orientation: mixed;
 
   background-color: var(--highlight-color);
-  color: var(--primary-fg-color);
+  color: var(--light-fg-color);
   border: none;
   border-radius: 0px 5px 5px 0px;
   cursor: pointer;
@@ -187,7 +200,7 @@ section {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: var(--section-bg-color-1);
+  background-color: var(--section-bg-color);
   border-radius: 30px;
 }
 
@@ -239,7 +252,7 @@ section {
   font-size: var(--fs-500);
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid var(--primary-fg-color);  
+  border-bottom: 2px solid var(--dark-fg-color);  
 }
 
 .input-field:focus {
@@ -252,7 +265,7 @@ section {
   margin: 1.2rem auto;
   padding: 0.5rem;
   font-size: var(--fs-500);
-  color: var(--primary-fg-color);
+  color: var(--light-fg-color);
   background-color: var(--highlight-color);
   border: none;
   border-radius: 50px;
@@ -294,5 +307,6 @@ section {
   .container {
     flex-direction: row;
     text-align: left;
+    column-gap: 10%;
   }
 }
