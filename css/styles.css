@@ -332,14 +332,7 @@ section:nth-child(even) {
   }
 }
 
-@media (max-width: 400px)
-{
-  iframe[src*="google.com/forms"] {
-    height: 1200px !important;
-  }
-}
-
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .section-heading {
     font-size: var(--fs-900);
   }
