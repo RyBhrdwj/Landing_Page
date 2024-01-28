@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -46,7 +48,7 @@ a {
 
   --ff-primary : 'Roboto', sans-serif;
   --ff-body : var(--ff-primary);
-  --ff-heading : var(--ff-primary);
+  --ff-heading : 'Play', sans-serif;
 }
 
 header, .bottom-nav {
@@ -112,6 +114,7 @@ section:nth-child(even) {
 }
 
 .section-heading {
+  font-family: var(--ff-heading);
   font-size: var(--fs-850); 
   font-weight: var(--fw-normal);
   color: var(--heading-color);
