@@ -112,8 +112,7 @@ section:nth-child(even) {
 }
 
 .section-heading {
-  margin-bottom: 1rem;
-  font-size: var(--fs-800); 
+  font-size: var(--fs-850); 
   font-weight: var(--fw-normal);
   color: var(--heading-color);
 }
